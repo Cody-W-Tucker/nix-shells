@@ -9,7 +9,7 @@
 use nix
 ```
 
-3. Copy or link the node-shell.nix file to the root of the project
+3. Copy or link the shell.nix file to the root of the project
 4. Add the dependencies to the `node-shell.nix` file
 
 ```nix
