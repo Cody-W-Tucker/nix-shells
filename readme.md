@@ -13,16 +13,18 @@ use nix
 4. Add the dependencies to the `node-shell.nix` file
 
 ```nix
-in pkgs.mkShell {
-  packages = with pkgs; [
-    nodejs
-    nodePackages.npm
+{ pkgs ? import <nixpkgs> {} }:
 
-    # Add your dependencies here
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.nodejs
+    pkgs.nodePackages_latest.vercel
+    pkgs.nodePackages_latest.typescript
 
     # keep this line if you use bash
     pkgs.bashInteractive
   ];
+}
 
 ```
 
