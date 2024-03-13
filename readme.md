@@ -6,7 +6,7 @@
 2. Add the following to the `.envrc` file
 
 ```sh
-layout node
+use nix
 ```
 
 3. Copy or link the node-shell.nix file to the root of the project
